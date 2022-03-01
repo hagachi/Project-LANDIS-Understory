@@ -1,0 +1,35 @@
+﻿LandisData  Scenario
+
+>>
+>> Date:    2021/03/09
+>> Version: v2.0 (Alpha)
+>> Note:    Resilience only case for ESJ68
+>>
+
+Duration                    87 << Spinup 2 year (2014-2015) + Scenarios 85 years (2016-2100) = 87
+Species                     ../../../input/species_donan_2021-08-10.txt
+Ecoregions                  ../../../ini/ecoregion_donan_2021-03-09.txt
+EcoregionsMap_replacehere
+CellLength                  10     << meters, 100 x 100 m = 1 ha
+
+
+>> Succession Extension     Initialization File
+>> --------------------     -------------------
+"NECN Succession"           ./NECN-succession_donan_v3.1.0.txt
+
+
+>> Disturbance Extensions   Initialization File
+>> ----------------------   -------------------
+"Biomass Harvest"          ./BiomassHarvest_v3.1.0.txt
+
+>> DisturbancesRandomOrder     yes      << optional parameter; default = no
+
+
+>> Other Extensions         Initialization File
+>> ----------------         ------------------
+"Output Biomass"            ../../../ini/output-biomass.txt
+"Output Biomass-by-Age"     ../../../ini/output-biomass-by-age.txt
+
+
+>> RandomNumberSeed            4,357 << Alpha_v3.0.1 repeat simulation
+>> optional parameter; default = the seed is randomly generated using the current time

@@ -1,0 +1,117 @@
+﻿LandisData  "NECN Succession"
+
+>>
+>> Date:    20/01/27
+>> Version: v3.1.0 (Alpha)
+>> Note:    Resilience only case for ESJ67, with sasa
+>>
+
+
+Timestep  1
+SeedingAlgorithm  			WardSeedDispersal
+InitialCommunities      	"../../../ini/initial-communities-donan_v6_sasa_2021-03-14.txt"
+InitialCommunitiesMap_replacehere
+ClimateConfigFile_replacehere
+
+SoilDepthMapName				../../../input/condition_regREGIDHERE_33.tif
+SoilDrainMapName				../../../input/condition_regREGIDHERE_0.75.tif
+SoilBaseFlowMapName				../../../input/condition_regREGIDHERE_0.3.tif
+SoilStormFlowMapName			../../../input/condition_regREGIDHERE_0.6.tif
+SoilFieldCapacityMapName		../../../input/condition_regREGIDHERE_0.26.tif
+SoilWiltingPointMapName			../../../input/condition_regREGIDHERE_0.09.tif
+SoilPercentSandMapName			../../../input/condition_regREGIDHERE_0.41.tif
+SoilPercentClayMapName			../../../input/condition_regREGIDHERE_0.13.tif
+InitialSOM1CsurfMapName			../../../input/condition_regREGIDHERE_45.tif
+InitialSOM1NsurfMapName			../../../input/condition_regREGIDHERE_1.6.tif
+InitialSOM1CsoilMapName			../../../input/condition_regREGIDHERE_156.43.tif
+InitialSOM1NsoilMapName			../../../input/condition_regREGIDHERE_8.14.tif
+InitialSOM2CMapName				../../../input/condition_regREGIDHERE_3340.99.tif
+InitialSOM2NMapName				../../../input/condition_regREGIDHERE_173.83.tif
+InitialSOM3CMapName				../../../input/condition_regREGIDHERE_1610.66.tif
+InitialSOM3NMapName				../../../input/condition_regREGIDHERE_83.82.tif
+InitialDeadWoodSurfaceMapName	../../../input/condition_regREGIDHERE_110.tif	<< NEW, Default
+InitialDeadCoarseRootsMapName	../../../input/condition_regREGIDHERE_50.tif	<< NEW, Default
+
+CalibrateMode 			no  << New params
+ReduceOutputs			no  << New params
+KCompLimit				-0.14  << New params
+SmokeModelOutputs		no
+WaterDecayFunction		Ratio
+
+ProbabilityEstablishAdjust 	1.0
+InitialMineralN			6.6
+InitialFineFuels		0.1		<< Default
+AtmosphericNSlope		0.0058
+AtmosphericNIntercept	0.024
+Latitude				43.13
+DenitrificationRate		0.001
+DecayRateSurf			0.76
+DecayRateSOM1			1.03
+DecayRateSOM2			0.05
+DecayRateSOM3			0.0005
+GrassThresholdMultiplier 1.0 << New params
+
+MaximumLAI
+
+>> Shade	Max LAI
+>> Class	
+>> ----------	--------------------	
+	1	1 
+	2	2.5 
+	3	3.5 
+	4	6
+	5	8
+		
+LightEstablishmentTable	
+					
+>>	Spp Shade	Probability					
+>>	Class		by Actual Shade					
+>>	 ----------	--------------------					
+>>		0	1	2	3	4	5
+>> Case 3. fix lowest values from 0 to 0.01
+	1	1.0	0.5	0.02	0.01	0.01	0.01
+	2	0.6	1.0	0.5	0.02	0.01	0.01
+	3	0.01	0.6	1.0	0.5	0.02	0.01
+	4	0.01	0.01	0.6	1.0	0.5	0.02
+	5	0.01	0.01	0.01	0.5	1.0	0.5
+		
+			
+SpeciesParameters
+>> Species  Funct	N		GDD		GDD		Min		Max		Leaf	Epi-	Leaf	FRoot	Wood	CRoot	Leaf	FRoot 	Wood  	CRoot 	Littr	Monthly	Max
+>>	    	ional	Fixer	Min		Max		Jan		Drought	Long	cormic	Lign%	Lign%	Lign%	Lign%	CN		CN    	CN    	CN    	CN		maxNPP	Biom
+>> 	    	Type							Temp					re-
+betuerma	1	N	487	2613	-21	0.5	1	N	0.21	0.27	0.2018	0.251	23.92548857	26	384	50	65	501	50000
+fagucren	2	N	693	3564	-18	0.5	1	N	0.21	0.27	0.2018	0.251	23.92548857	26	384	50	65	468	50526
+quercris	3	N	693	3560	-20	0.67	1	Y	0.2	0.334	0.225	0.303	22.215	58	345	113	32	569	50000
+acermono	4	N	730	3793	-20	0.072	1	N	0.213	0.334	0.19	0.312	25	23.3	388	50	41.1	560	50000
+larikaem	5	N	690	3564	-20	0.83	1	N	0.21	0.225	0.312	0.204	29.92875465	26	600	50	74	671	66378
+abiesach	6	N	693	2284	-23	0.67	3	N	0.22	0.225	0.312	0.204	44.31359688	43	482	84	74	488	50000
+crypjapo	7	N	929	6162	-16	0.67	3	N	0.266	0.4	0.381818182	0.35	52	28	380	170	100	752	60945
+sasa_spp	8	N	693	3279	-18	0.97	3	Y	0.25	0.2	0.25	0.25	20	28	333	222	50	469	10725
+
+
+FunctionalGroupParameters  <<from tree.100
+>> Name		Index	PPDF1	PPDF2	PPDF3	PPDF4	FCFRAC	BTOLAI	KLAI	MAXLAI	PPRPTS2	PPRPTS3	Wood	Monthly	Mort	Drop	CRootFrac 	FRootFRac
+>> 					T-Mean	T-Max	T-shape	T-shape	leaf											DecayR	WoodMortShape	Month
+f_betuerma	1	23.4	38.4	1	3	0.3	-0.9	6667	6	1	0.8	0.03	0.0019	25	9	0.2	0.5
+f_fagucren	2	26.5	41.5	1	3	0.3	-0.9	7153	6	1	0.8	0.03	0.0016	25	9	0.2	0.5
+f_quercris	3	26.6	41.6	1	3	0.3	-0.9	5868	6	1	0.8	0.032	0.0026	25	9	0.21	0.481
+f_acermono	4	26.8	41.8	1	3	0.3	-0.9	5455	6	1	0.8	0.03	0.0032	25	9	0.2	0.5
+f_larikaem	5	26.4	41.4	1	3	0.2	-0.9	5921	10	1	0.8	0.036	0.0012	25	10	0.23	0.2
+f_abiesach	6	22.5	37.5	1	3	0.2	-0.9	7485	10	1	0.8	0.036	0.0043	25	10	0.23	0.2
+f_crypjapo	7	28.3	43.3	1	3	0.2	-0.9	10406	10	1	0.8	0.039	0.0017	25	10	0.31	0.56
+f_sasa_spp	8	25.9	40.9	1	3.5	0.32	-0.853	1516	16	1	0.8	1	0.001	25	9	0.25	0.35
+
+
+
+FireReductionParameters
+>>	Severity	WoodLitter	Litter	SOM
+>>	Fire		Reduct		Reduct	Reduction
+	1			0.0			0.5		0.5
+	2			0.0			0.75	0.5
+	3			0.0			1.0		0.5
+
+HarvestReductionParameters
+>>	Name		WoodLitter	Litter	SOM			CohortWood	CohortLeaf
+>>				Reduct		Reduct	Reduction	Removal		Removal
+HarvestReductionParameters_replacehere

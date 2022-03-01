@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionDataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Extensions>
+    <Extension Name="Output Biomass-by-Age" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.BiomassByAge-v3</Assembly>
+      <Class>Landis.Extension.Output.BiomassByAge.PlugIn</Class>
+      <Description>Output biomass by ageclass by species</Description>
+    </Extension>
+    <Extension Name="NECN Succession" Version="6.3">
+      <Type>succession</Type>
+      <Assembly>Landis.Extension.Succession.NECN-v6</Assembly>
+      <Class>Landis.Extension.Succession.NECN.PlugIn</Class>
+      <Description>Succession with complete Carbon and Nitrogen cycling</Description>
+    </Extension>
+    <Extension Name="Output Biomass" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.Biomass-v3</Assembly>
+      <Class>Landis.Extension.Output.Biomass.PlugIn</Class>
+      <Description>Output biomass maps</Description>
+    </Extension>
+    <Extension Name="Output Cohort Statistics" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.CohortStats-v3</Assembly>
+      <Class>Landis.Extension.Output.CohortStats.PlugIn</Class>
+      <Description>This extension will produce outputs of cohort statistics</Description>
+    </Extension>
+    <Extension Name="Biomass Harvest" Version="4.3">
+      <Type>disturbance:harvest</Type>
+      <Assembly>Landis.Extension.BiomassHarvest-v4</Assembly>
+      <Class>Landis.Extension.BiomassHarvest.PlugIn</Class>
+      <Description>Harvesting for biomass cohorts</Description>
+    </Extension>
+  </Extensions>
+</ExtensionDataset>

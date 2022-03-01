@@ -1,0 +1,15 @@
+﻿LandisData	"Ecoregions"
+
+>>
+>> Date:    2019/12/29
+>> Version: v1.0 (Alpha)
+>>
+
+
+>>	Active	Map		Name	Description
+>>			Code
+>>--------------------------------------------------------			
+	no		0		eco0	"non-Active"
+	yes		1		eco001	"Active"
+	yes		2		eco002	"Active"
+	yes		3		eco003	"Active"

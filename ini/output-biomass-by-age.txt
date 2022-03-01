@@ -1,0 +1,15 @@
+LandisData  "Output Biomass-by-Age"
+
+Timestep   2
+
+MapNames   OutputMaps/spp-biomass-by-age/{species}-{ageclass}-{timestep}.tif
+
+Species	betuerma ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		fagucren ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		quercris ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		acermono ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		larikaem ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		abiesach ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		crypjapo ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+		sasa_spp ageclass1(1-25) ageclass2(26-50) ageclass3(>51)
+

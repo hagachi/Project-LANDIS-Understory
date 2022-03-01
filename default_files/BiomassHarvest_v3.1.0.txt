@@ -1,0 +1,396 @@
+LandisData  "Biomass Harvest"
+
+>>
+>> Date:    19/02/07
+>> Version: v1.1 (Alpha)
+>> Note:    Resilience only case for ESJ67
+>>
+
+Timestep    1
+ManagementAreas_replacehere
+Stands_replacehere
+
+>> CL case setting (ID = 2) 
+>> 2021.03.09: updated max age referring to their longevity
+>> 稚樹のみ残る。倒木の下敷きになる地樹とササは死亡する。
+Prescription CLwindthrow
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-18 (10%) 19-300
+		fagucren	1-18 (10%) 19-500
+		quercris	1-18 (10%) 19-400
+		acermono	1-18 (10%) 19-200
+		larikaem	1-18 (10%) 19-180
+		abiesach	1-18 (10%) 19-200
+		crypjapo	1-18 (10%) 19-300
+		sasa_spp	1-900 (10%)
+
+>> SLPL case settings =============================
+>> SLPL1 plant betura (ID = 3)
+Prescription slpl1_betuerma
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant betuerma
+
+>> SLPL1 plant fagucren (ID = 4)
+Prescription slpl1_fagucren
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant fagucren
+
+>> SLPL1 plant quercris (ID = 5)
+Prescription slpl1_quercris
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant quercris
+
+>> SLPL1 plant acermono (ID = 6)
+Prescription slpl1_acermono
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant acermono
+
+>> SLPL1 plant larikaem (ID = 7)
+Prescription slpl1_larikaem
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant larikaem
+
+>> SLPL1 plant abiesach (ID = 8)
+Prescription slpl1_abiesach
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant abiesach
+
+>> SLPL1 plant crypjapo (ID = 9)
+Prescription slpl1_crypjapo
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant crypjapo
+
+>> SLPL2 plant crypjapo (ID = 10)
+Prescription slpl2
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-300
+		fagucren	1-500
+		quercris	1-400
+		acermono	1-200
+		larikaem	1-180
+		abiesach	1-200
+		crypjapo	1-300
+		sasa_spp	1-900
+	Plant crypjapo
+
+>> SLPL1&2 for natural forest (ID = 11)
+>> 風倒木を撤去する際に地表の60%を撹乱する
+Prescription slpl_naturalforest
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	1-18 (60%) 19-300
+		fagucren	1-18 (60%) 19-500
+		quercris	1-18 (60%) 19-400
+		acermono	1-18 (60%) 19-200
+		larikaem	1-18 (60%) 19-180
+		abiesach	1-18 (60%) 19-200
+		crypjapo	1-18 (60%) 19-300
+		sasa_spp	1-900 (60%)
+
+
+>> SLPL removing grass species ==============
+>> SLPL1 plant betura (ID = 12)
+Prescription cutothers_betuerma
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		fagucren	All
+		quercris	All
+		acermono	All
+		larikaem	All
+		abiesach	All
+		crypjapo	All
+		sasa_spp	All
+
+>> SLPL1 plant fagucren (ID = 13)
+Prescription cutothers_fagucren
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	All
+		quercris	All
+		acermono	All
+		larikaem	All
+		abiesach	All
+		crypjapo	All
+		sasa_spp	All
+
+>> SLPL1 plant quercris (ID = 14)
+Prescription cutothers_quercris
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	All
+		fagucren	All
+		acermono	All
+		larikaem	All
+		abiesach	All
+		crypjapo	All
+		sasa_spp	All
+
+>> SLPL1 plant acermono (ID = 15)
+Prescription cutothers_acermono
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	All
+		fagucren	All
+		quercris	All
+		larikaem	All
+		abiesach	All
+		crypjapo	All
+		sasa_spp	All
+
+>> SLPL1 plant larikaem (ID = 16)
+Prescription cutothers_larikaem
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	All
+		fagucren	All
+		quercris	All
+		acermono	All
+		abiesach	All
+		crypjapo	All
+		sasa_spp	All
+
+>> SLPL1 plant abiesach (ID = 17)
+Prescription cutothers_abiesach
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	All
+		fagucren	All
+		quercris	All
+		acermono	All
+		larikaem	All
+		crypjapo	All
+		sasa_spp	All
+
+>> SLPL1 plant crypjapo (ID = 18)
+Prescription cutothers_crypjapo
+	StandRanking	Random
+	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		betuerma	All
+		fagucren	All
+		quercris	All
+		acermono	All
+		larikaem	All
+		abiesach	All
+		sasa_spp	All
+
+>> Reduce sasa spp. reffering snow reduction
+ Prescription sasareduct5
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (5%)
+
+ Prescription sasareduct10
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (10%)
+
+ Prescription sasareduct15
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (15%)
+
+ Prescription sasareduct20
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (20%)
+
+ Prescription sasareduct25
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (25%)
+
+ Prescription sasareduct30
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (30%)
+
+ Prescription sasareduct35
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (35%)
+
+ Prescription sasareduct40
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (40%)
+
+ Prescription sasareduct45
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (45%)
+
+ Prescription sasareduct50
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (50%)
+
+ Prescription sasareduct55
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (55%)
+
+ Prescription sasareduct60
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (60%)
+
+ Prescription sasareduct65
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (65%)
+
+ Prescription sasareduct70
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (70%)
+
+ Prescription sasareduct75
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (75%)
+
+ Prescription sasareduct80
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (80%)
+
+ Prescription sasareduct85
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (85%)
+
+ Prescription sasareduct90
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (90%)
+
+ Prescription sasareduct95
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (95%)
+
+ Prescription sasareduct99
+ 	StandRanking	Random
+ 	SiteSelection	Complete
+	CohortsRemoved	SpeciesList
+		sasa_spp	1-900 (99%)
+
+
+>> SLPL cut sasa only (ID = 19)
+>> Prescription cut_sasa
+>> 	StandRanking	Random
+>> 	SiteSelection	Complete
+>>	CohortsRemoved	SpeciesList
+>>		sasa_spp	All
+
+>>-----------------------------------------------------------------
+HarvestImplementations
+HarvestImplementations_replacehere
+SasaReduction_replacehere
+
+>>-----------------------------------------------------------------
+PrescriptionMaps    OutputMaps/harvest/prescripts-{timestep}.img
+BiomassMaps         OutputMaps/harvest/biomass-removed-{timestep}.img
+EventLog            biomass-harvest-event-test-log.csv
+SummaryLog	    	biomass-harvest-summary-log.csv
